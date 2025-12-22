@@ -1,110 +1,61 @@
-
-# Listify 🎶
-
----
-
-> **음악 추천과 플레이리스트 관리가 한 곳에!**
-
----
-
-## 🎤 프로젝트 소개
-Listify는 Spotify API와 연동하여 음악을 추천하고, 사용자가 직접 플레이리스트를 만들고 관리할 수 있는 풀스택 웹 프로젝트입니다. React 기반의 프론트엔드와 Flask 기반의 백엔드, MySQL 데이터베이스, Docker를 활용한 배포 환경을 갖추고 있습니다.
-
-## 🚀 배포 사이트
-- [서비스 바로가기](https://your-deploy-url.com)
-
-## 🎬 시연 영상
-- [YouTube 시연 영상 보기](https://your-demo-video-url.com)
-
-## 📑 발표자료(PPT)
-- [프로젝트 발표자료](https://your-ppt-url.com)
-
----
-
-## 🎼 주요 기능
-- 회원가입 및 로그인 (JWT 인증)
-- 음악 추천 및 검색 (Spotify API 연동)
-- 플레이리스트 생성/관리
-- 음악 미리듣기(Spotify 웹 플레이어)
-- 사용자 프로필 관리 및 수정
-- 공지사항 확인
-
----
-
-## 🛠️ 기술 스택
-- **Frontend**: React, Vite, TypeScript
-- **Backend**: Python (Flask)
-- **Database**: MySQL
-- **외부 API**: Spotify API
-- **DevOps/Deployment**: Docker
-
----
-
-## 📁 폴더 구조
-```
-Listify/
-├── backend/
-│   ├── app.py
-│   ├── controllers/
-│   ├── model/
-│   ├── routes/
-│   ├── services/
-│   ├── middleware/
-│   └── ...
-├── frontend/
-│   ├── App.tsx
-│   ├── components/
-│   ├── pages/
-│   ├── services/
-│   └── ...
-└── README.md
-```
-
----
-
-## ⚡️ 설치 및 실행 방법
-### 환경설정
-- Python 3.x, Node.js, npm, MySQL, Docker 설치 필요
-- backend/.env 파일에 DB 및 Spotify API 키 등 환경변수 설정
-
-### 백엔드 실행
-```bash
-cd backend
-pip install -r requirements.txt
-python app.py
-```
-
-### 프론트엔드 실행
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### Docker로 전체 실행 (선택)
-```bash
-docker-compose up --build
-```
-
----
-
-## 📚 API 문서
-- 주요 엔드포인트: `/music`, `/playlist`, `/user`, `/notice` 등
-- 상세 API 문서는 [backend/API_TEST_GUIDE.md](backend/API_TEST_GUIDE.md) 참고
-
----
-
-## 🤝 기여 방법
-1. 이슈 등록 또는 Pull Request 생성
-2. 코드 컨벤션 및 커밋 메시지 규칙 준수
-3. 팀원과 협업 시 README 및 문서 업데이트
-
----
-
-## 📄 라이선스
-MIT License
-
----
-
-## 📬 문의
-프로젝트 관련 문의: [your-email@example.com]
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Listify 프로젝트 소개</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f7fa; margin: 0; }
+    .container { display: flex; max-width: 1100px; margin: 40px auto; background: #fff; border-radius: 16px; box-shadow: 0 2px 8px #0001; }
+    .left, .right { padding: 32px; }
+    .left { flex: 1; border-right: 1px solid #eee; }
+    .right { flex: 1; }
+    h1 { font-size: 2.2em; margin-bottom: 0.2em; }
+    ul { margin: 1em 0; }
+    .video { margin-bottom: 24px; }
+    .links a { display: inline-block; margin: 8px 0; padding: 10px 18px; background: #2d7cf7; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 500; }
+    .links a:hover { background: #1a5bb8; }
+    @media (max-width: 900px) {
+      .container { flex-direction: column; }
+      .left, .right { border-right: none; border-bottom: 1px solid #eee; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>Listify 🎶</h1>
+      <p><b>음악 추천과 플레이리스트 관리가 한 곳에!</b></p>
+      <ul>
+        <li>회원가입 및 로그인 (JWT 인증)</li>
+        <li>음악 추천 및 검색 (Spotify API 연동)</li>
+        <li>플레이리스트 생성/관리</li>
+        <li>음악 미리듣기(Spotify 웹 플레이어)</li>
+        <li>사용자 프로필 관리 및 수정</li>
+        <li>공지사항 확인</li>
+      </ul>
+      <h3>기술 스택</h3>
+      <ul>
+        <li>Frontend: React, Vite, TypeScript</li>
+        <li>Backend: Python (Flask)</li>
+        <li>Database: MySQL</li>
+        <li>외부 API: Spotify API</li>
+        <li>DevOps/Deployment: Docker</li>
+      </ul>
+    </div>
+    <div class="right">
+      <div class="video">
+        <h3>프로젝트 소개 영상</h3>
+        <iframe width="100%" height="220" src="https://www.youtube.com/embed/프로젝트소개영상ID" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video">
+        <h3>시연 영상</h3>
+        <iframe width="100%" height="220" src="https://www.youtube.com/embed/시연영상ID" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="links">
+        <a href="https://your-deploy-url.com" target="_blank">배포 사이트 바로가기 🚀</a><br>
+        <a href="https://your-ppt-url.com" target="_blank">프로젝트 발표자료(PPT) 📑</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
