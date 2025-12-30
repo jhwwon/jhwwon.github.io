@@ -1,61 +1,72 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>Listify 프로젝트 소개</title>
-  <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f7fa; margin: 0; }
-    .container { display: flex; max-width: 1100px; margin: 40px auto; background: #fff; border-radius: 16px; box-shadow: 0 2px 8px #0001; }
-    .left, .right { padding: 32px; }
-    .left { flex: 1; border-right: 1px solid #eee; }
-    .right { flex: 1; }
-    h1 { font-size: 2.2em; margin-bottom: 0.2em; }
-    ul { margin: 1em 0; }
-    .video { margin-bottom: 24px; }
-    .links a { display: inline-block; margin: 8px 0; padding: 10px 18px; background: #2d7cf7; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 500; }
-    .links a:hover { background: #1a5bb8; }
-    @media (max-width: 900px) {
-      .container { flex-direction: column; }
-      .left, .right { border-right: none; border-bottom: 1px solid #eee; }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="left">
-      <h1>Listify 🎶</h1>
-      <p><b>음악 추천과 플레이리스트 관리가 한 곳에!</b></p>
-      <ul>
-        <li>회원가입 및 로그인 (JWT 인증)</li>
-        <li>음악 추천 및 검색 (Spotify API 연동)</li>
-        <li>플레이리스트 생성/관리</li>
-        <li>음악 미리듣기(Spotify 웹 플레이어)</li>
-        <li>사용자 프로필 관리 및 수정</li>
-        <li>공지사항 확인</li>
-      </ul>
-      <h3>기술 스택</h3>
-      <ul>
-        <li>Frontend: React, Vite, TypeScript</li>
-        <li>Backend: Python (Flask)</li>
-        <li>Database: MySQL</li>
-        <li>외부 API: Spotify API</li>
-        <li>DevOps/Deployment: Docker</li>
-      </ul>
-    </div>
-    <div class="right">
-      <div class="video">
-        <h3>프로젝트 소개 영상</h3>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/프로젝트소개영상ID" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="video">
-        <h3>시연 영상</h3>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/시연영상ID" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="links">
-        <a href="https://your-deploy-url.com" target="_blank">배포 사이트 바로가기 🚀</a><br>
-        <a href="https://your-ppt-url.com" target="_blank">프로젝트 발표자료(PPT) 📑</a>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+# 🚀 [사용자 성함]의 데이터 과학 포트폴리오
+> **데이터를 통해 비즈니스의 답을 찾는 머신러닝 엔지니어 [또는 데이터 분석가]입니다.**
+
+<div align="center">
+  <a href="mailto:[이메일주소]"><img src="https://img.shields.io/badge/Email-[이메일]-blue?style=for-the-badge&logo=gmail"></a>
+  <a href="[링크드인주소]"><img src="https://img.shields.io/badge/LinkedIn-Profile-black?style=for-the-badge&logo=linkedin"></a>
+  <a href="[블로그주소]"><img src="https://img.shields.io/badge/Blog-Tech_Notes-orange?style=for-the-badge&logo=tistory"></a>
+</div>
+
+---
+
+## 🛠 Tech Stacks
+<div align="left">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white">
+  <img src="https://img.shields.io/badge/XGBoost-111111?style=flat-square&logo=xgboost&logoColor=white">
+  <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white">
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white">
+  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=github&logoColor=white">
+</div>
+
+---
+
+## 🌟 Featured Projects
+
+### 01. 이커머스 고객 이탈 예측 및 분석 솔루션 🛒
+**"고객 데이터 분석을 통한 이탈률 감소 및 마케팅 효율 극대화"**
+
+<img src="[프로젝트_시연_GIF_또는_이미지_링크]" width="100%" />
+
+- **핵심 역할**: 데이터 전처리, 불균형 데이터 처리(SMOTE), 모델 튜닝 및 배포
+- **주요 성과**: 
+  - **ROC-AUC 0.9520**, **PR-AUC 0.9060** 달성 (우수한 변별력 입증)
+  - 이탈에 가장 큰 영향을 주는 **Top 5 요인(Lifetime Value, Call Count 등)** 규명
+- **사용한 기술**: `Python`, `XGBoost`, `SMOTE`, `Streamlit`, `Scikit-learn`
+- **링크**: [코드 보기]([프로젝트_저장소_링크]) | [라이브 데모]([스트림릿_배포_링크])
+
+---
+
+### 02. [다음 프로젝트 제목] 📊
+**"여기에 프로젝트의 핵심 가치를 한 줄로 적으세요"**
+
+- **작업 내용**: 데이터 수집, EDA, 딥러닝 모델 설계 등
+- **핵심 성과**: 정확도 00% 달성, 기존 대비 성능 00% 향상
+- **사용한 기술**: `PyTorch`, `Tensorflow`, `SQL`
+- **링크**: [코드 보기]([링크])
+
+---
+
+### 03. [세 번째 프로젝트 제목] 💡
+**"프로젝트의 짧은 설명을 여기에 적으세요"**
+
+- **작업 내용**: 시각화 대시보드 구축 및 비즈니스 인사이트 도출
+- **사용한 기술**: `Tableau`, `Python`, `BeautifulSoup`
+- **링크**: [분석 리포트 보기]([링크])
+
+---
+
+## 📈 My Strength & Stats
+- **Data-Driven**: 복잡한 비즈니스 문제를 수치화하여 해결하는 것을 즐깁니다.
+- **Model Deployment**: 학습된 모델을 실제 서비스로 빠르게 전환할 수 있는 인프라 역량을 보유하고 있습니다.
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=[사용자깃허브ID]&show_icons=true&theme=radical">
+</div>
+
+---
+
+## 📫 Contact
+- **Email**: [이메일주소]
+- **Phone**: [전화번호]
+- **Location**: Seoul, South Korea
