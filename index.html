@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[내이름] | Data Science Portfolio</title>
+    <!-- Google Fonts: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">DATA SCIENTIST</div>
+        <ul>
+            <li><a href="#hero">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="fade-in">Hi, I'm <span>[내 이름]</span></h1>
+            <p class="subtitle fade-in delay-1">데이터로 비즈니스의 미래를 예측하는 머신러닝 엔지니어입니다.</p>
+            <div class="hero-btns fade-in delay-2">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="#contact" class="btn secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="tech" class="tech-section">
+        <h2 class="section-title">Technical Arsenal</h2>
+        <div class="tech-container">
+            <div class="tech-item"><i class="fab fa-python"></i><span>Python</span></div>
+            <div class="tech-item"><i class="fas fa-brain"></i><span>XGBoost</span></div>
+            <div class="tech-item"><i class="fas fa-chart-line"></i><span>Scikit-Learn</span></div>
+            <div class="tech-item"><i class="fas fa-database"></i><span>SQL</span></div>
+            <div class="tech-item"><i class="fas fa-desktop"></i><span>Streamlit</span></div>
+            <div class="tech-item"><i class="fab fa-github"></i><span>Git</span></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Masterpieces</h2>
+        <div class="projects-grid">
+            <!-- Project 1: 이탈 예측 -->
+            <div class="project-card glass">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Churn Prediction">
+                </div>
+                <div class="project-info">
+                    <span class="category">Machine Learning</span>
+                    <h3>이커머스 고객 이탈 예측 솔루션</h3>
+                    <p>XGBoost와 SMOTE를 활용하여 고객 이탈 징후를 95.2% 확률로 포착하는 시스템을 구축했습니다.</p>
+                    <div class="project-tags">
+                        <span>XGBoost</span>
+                        <span>SMOTE</span>
+                        <span>StandardScaler</span>
+                        <span>Streamlit</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="[사용자_깃허브_링크]" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="[스트림릿_데모_링크]" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 (Placeholder) -->
+            <div class="project-card glass">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Next Project">
+                </div>
+                <div class="project-info">
+                    <span class="category">Data Analysis</span>
+                    <h3>[다음 프로젝트 제목]</h3>
+                    <p>프로젝트에 대한 핵심 성과와 가치를 한 줄로 설명해 보세요.</p>
+                    <div class="project-tags">
+                        <span>NLP</span>
+                        <span>PyTorch</span>
+                        <span>AWS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-card glass">
+            <h2>Let's Collaborate</h2>
+            <p>함께 데이터를 고민할 준비가 되어 있습니다.</p>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> [사용자_이메일]@gmail.com</p>
+                <p><i class="fab fa-linkedin"></i> [링크드인_프로필]</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [사용자 이름]. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
