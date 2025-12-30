@@ -3,105 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JH.WON | Refreshing Data Insights</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>JH.WON | Advanced Preditive Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="progress-bar" id="progressBar"></div>
-
+    <div class="header-banner">
+        🚀 Latest Update: ML Churn Model achieved 95.2% accuracy.
+    </div>
+    
     <nav id="navbar">
-        <div class="logo"><i class="fas fa-seedling"></i> JH.<span>WON</span></div>
-        <ul>
-            <li><a href="#hero">HOME</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
+        <div class="container nav-content">
+            <div class="logo">JH.WON<span>LAB</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Overview</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact" class="nav-cta">Get Started</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="container grid-hero">
-                <div class="hero-text">
-                    <div class="badge fade-in">Refreshing Data Scientist</div>
-                    <h1 class="fade-in">시원하게 뚫어주는<br><span>데이터 인사이트.</span></h1>
-                    <p class="fade-in">복잡한 이커머스 데이터를 분석하여 이탈 징후를 선제적으로 포착하고, <br>비즈니스의 성장을 돕는 신선한 솔루션을 제안합니다.</p>
-                    <div class="hero-actions fade-in">
-                        <a href="#projects" class="btn btn-primary">프로젝트 원정대</a>
-                        <a href="#contact" class="btn btn-outline">대화 신청하기</a>
-                    </div>
-                </div>
-                <div class="hero-image-container fade-in">
-                    <!-- 수박 프로필 이미지가 들어가는 곳 -->
-                    <div class="profile-circle glass">
-                        <img src="profile.jpg" alt="Watermelon Profile">
-                    </div>
-                    <div class="floating-badge fb-1 glass"><i class="fas fa-check"></i> ROC-AUC 0.95</div>
-                    <div class="floating-badge fb-2 glass"><i class="fas fa-bolt"></i> XGBoost Expert</div>
+    <section id="hero" class="hero-section">
+        <div class="hero-bg">
+            <img src="corporate_bg.png" alt="Tech Background">
+            <div class="overlay"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-text fade-in">
+                <span class="eyebrow">Enterprise Data Science</span>
+                <h1>Turning Complex Data<br>Into <span>Fresh Insights.</span></h1>
+                <p>고객 행동의 미묘한 시그널을 포착하여 비즈니스 위기를 기회로 전환하는<br>지능형 예측 솔루션을 설계합니다.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-filled">Explore Solutions</a>
+                    <a href="#solutions" class="btn btn-text">How it works <i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="stats container">
-            <div class="stat-card glass">
-                <div class="stat-num">0.9520</div>
-                <p>최고 예측 정확도</p>
-            </div>
-            <div class="stat-card glass">
-                <div class="stat-num">15+</div>
-                <p>핵심 특성 추출</p>
-            </div>
-            <div class="stat-card glass">
-                <div class="stat-num">SMOTE</div>
-                <p>데이터 불균형 해결</p>
-            </div>
-        </section>
-
-        <!-- Project Details -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">달콤한 프로젝트 성과</h2>
-                <div class="project-box glass main-pj">
-                    <div class="pj-desc">
-                        <span class="pj-tag">Main Project</span>
-                        <h3>이커머스 이탈 예측 솔루션</h3>
-                        <p>단순한 수치를 넘어 실전에서 작동하는 예측 모델을 구축했습니다. <br>고객의 리스크 등급을 3단계로 나누어 맞춤형 대응이 가능하게 설계했습니다.</p>
-                        <div class="pj-links">
-                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#"><i class="fas fa-magic"></i> Live Demo</a>
+            <div class="hero-visual fade-in">
+                <div class="profile-wrapper">
+                    <img src="profile.jpg" alt="Watermelon Scientist" class="main-profile">
+                    <div class="floating-stat glass">
+                        <i class="fas fa-chart-area"></i>
+                        <div>
+                            <span>Prediction</span>
+                            <strong>95.2% Real-time</strong>
                         </div>
                     </div>
-                    <div class="pj-viz-box">
-                        <!-- 여기에 주피터 노트북에서 뽑은 그래프 이미지를 넣으면 최고입니다 -->
-                        <div class="viz-inner">DATA VISUAL</div>
-                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Trusted Metrics Section -->
+    <section class="metrics-bar">
+        <div class="container flex-justify">
+            <div class="metric-item"><strong>95.2%</strong> AUC-ROC</div>
+            <div class="metric-item"><strong>87%</strong> Efficiency</div>
+            <div class="metric-item"><strong>15+</strong> Optimized Features</div>
+            <div class="metric-item"><strong>Scalable</strong> Pipeline</div>
+        </div>
+    </section>
+
+    <!-- Services / Solutions Section -->
+    <section id="solutions" class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Data Strategy</h2>
+                <p>단순한 결과가 아닌, 신선하고 투명한 분석 과정을 약속합니다.</p>
+            </div>
+            <div class="solution-grid">
+                <div class="sol-card card-glass">
+                    <i class="fas fa-database"></i>
+                    <h3>Precision Preprocessing</h3>
+                    <p>SMOTE와 StandardScaler를 통한 정밀한 데이터 밸런싱 및 표준화.</p>
+                </div>
+                <div class="sol-card card-glass">
+                    <i class="fas fa-microchip"></i>
+                    <h3>XGBoost Architecture</h3>
+                    <p>현존 최고의 알고리즘을 활용한 복합 변수 관계 학습.</p>
+                </div>
+                <div class="sol-card card-glass">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Instant Deployment</h3>
+                    <p>학습된 지능을 언제 어디서나 활용할 수 있는 서빙 인터페이스.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="projects" class="section work-section">
+        <div class="container">
+            <div class="work-full-card glass">
+                <div class="work-content">
+                    <span class="label">Major Case Study</span>
+                    <h3>이커머스 고객 이탈 예측 시스템</h3>
+                    <p>고객의 결제 방식, 가입 연차, 서비스 이용 패턴을 종합 분석하여 이탈 고위험군을 분 단위로 포착하는 솔루션을 배포했습니다.</p>
+                    <div class="work-tags">
+                        <span>Classification</span><span>Automated ML</span><span>Python</span>
+                    </div>
+                </div>
+                <div class="work-preview">
+                    <!-- 주피터 노트북의 시각화 결과나 대시보드 스샷 추천 -->
+                    <div class="screen-mockup">DASHBOARD VIEW</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer id="contact">
-        <div class="container text-center">
-            <h2>Let's Grow Together!</h2>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="far fa-envelope"></i></a>
+        <div class="container">
+            <div class="footer-top">
+                <h2>Ready to refresh your data?</h2>
+                <a href="mailto:[내이메일]" class="btn btn-filled">Contact JH.WON</a>
             </div>
-            <p>&copy; 2024 JH.WON. All Rights Reserved.</p>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 JH.WON LAB. All Rights Reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
-
-    <script>
-        window.onscroll = function() {
-            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrolled = (winScroll / height) * 100;
-            document.getElementById("progressBar").style.width = scrolled + "%";
-        };
-    </script>
 </body>
 </html>
