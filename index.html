@@ -29,7 +29,6 @@
 
     <section id="hero" class="hero-section">
         <div class="hero-bg">
-            <!-- 배경 이미지 (corporate_bg.png) 배치 -->
             <img src="corporate_bg.png" alt="Tech Background">
             <div class="overlay"></div>
         </div>
@@ -45,7 +44,6 @@
             </div>
             <div class="hero-visual fade-in">
                 <div class="profile-wrapper">
-                    <!-- 수박 프로필 이미지 -->
                     <img src="profile.jpg" alt="Watermelon Scientist" class="main-profile">
                     <div class="floating-stat glass">
                         <i class="fas fa-heart"></i>
@@ -59,7 +57,6 @@
         </div>
     </section>
 
-    <!-- My Strength Bar -->
     <section class="metrics-bar">
         <div class="container flex-justify">
             <div class="metric-item"><strong>정밀 예측 모델링</strong> (AUC 0.95 달성)</div>
@@ -69,7 +66,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="about" class="section">
         <div class="container">
             <div class="section-header text-center">
@@ -96,7 +92,6 @@
         </div>
     </section>
 
-    <!-- Project Section -->
     <section id="projects" class="section work-section">
         <div class="container">
             <div class="section-header text-center">
@@ -110,18 +105,22 @@
                     <div class="work-tags">
                         <span>#이탈예측</span><span>#XGBoost</span><span>#머신러닝</span>
                     </div>
-                    <div class="pj-actions" style="margin-top: 30px;">
-                        <!-- 실제 소스코드 저장소로 연결 -->
-                        <a href="https://github.com/jhwwon/ML-Project" target="_blank" class="btn-text" style="text-decoration: none; font-weight: 800;">GitHub Repo <i class="fas fa-arrow-right"></i></a>
+                    
+                    <!-- PDF 보고서와 깃허브 버튼을 함께 배치한 부분 -->
+                    <div class="pj-actions" style="margin-top: 30px; display: flex; gap: 20px; align-items: center;">
+                        <a href="https://github.com/jhwwon/ML-Project" target="_blank" class="btn-text" style="text-decoration: none; font-weight: 800;">
+                            GitHub Repo <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="정혜원_머신러닝프로젝트.pdf" target="_blank" class="btn-text" style="text-decoration: none; font-weight: 800; color: #ef4444;">
+                            <i class="fas fa-file-pdf"></i> 분석 보고서 (PDF)
+                        </a>
                     </div>
                 </div>
                 <div class="work-preview">
-                    <!-- 대시보드 시각화 이미지 -->
                     <img src="churn_project.png" alt="Churn Analysis Dashboard" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
 
-            <!-- Project Explorer Section (추가된 부분) -->
             <div class="code-explorer-container glass fade-in">
                 <div class="explorer-header">
                     <div class="dots">
@@ -129,7 +128,7 @@
                         <span class="dot yellow"></span>
                         <span class="dot green"></span>
                     </div>
-                    <div class="explorer-title">Project Explorer - Ecommerce-Churn-Prediction</div>
+                    <div class="explorer-title">Project Explorer - ML-Project</div>
                 </div>
                 <div class="explorer-body">
                     <div class="file-sidebar border-right">
@@ -165,7 +164,7 @@ model = model_package[<span class="string">'model'</span>]
                             </pre></code>
                         </div>
                         <div class="code-footer">
-                            <a href="https://github.com/jhwwon/ML-Project/main/app_streamlit_COMPLETE.py" target="_blank">
+                            <a href="https://github.com/jhwwon/ML-Project/blob/main/app_streamlit_COMPLETE.py" target="_blank">
                                 <i class="fab fa-github"></i> 전체 소스코드 보기 (GitHub)
                             </a>
                         </div>
