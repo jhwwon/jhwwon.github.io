@@ -94,3 +94,56 @@ footer { background: var(--light); padding: 100px 0 50px; border-top: 1px solid 
 
 @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .fade-in { animation: fadeIn 1s ease forwards; }
+
+
+/* Code Explorer 디자인 */
+.code-explorer-container {
+    margin-top: 40px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.explorer-header {
+    background: rgba(15, 23, 42, 0.05);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.dots { display: flex; gap: 8px; margin-right: 20px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+.explorer-title { font-size: 0.8rem; font-weight: 700; color: var(--slate); opacity: 0.7; }
+
+.explorer-body { display: flex; flex: 1; overflow: hidden; }
+
+/* 탐색기 사이드바 */
+.file-sidebar {
+    width: 250px;
+    background: rgba(255,255,255,0.3);
+    padding: 20px 0;
+    font-size: 0.85rem;
+}
+.sidebar-title { padding-left: 20px; margin-bottom: 15px; font-weight: 800; color: var(--slate); font-size: 0.7rem; letter-spacing: 1px; }
+.file-list { list-style: none; }
+.file-list li { padding: 8px 20px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.2s; }
+.file-list li:hover { background: rgba(59, 130, 246, 0.1); }
+.file-list li.active { background: white; font-weight: 700; color: var(--primary); }
+.file-list i { font-size: 1rem; }
+
+/* 코드 영역 */
+.code-main { flex: 1; display: flex; flex-direction: column; background: #fafafa; }
+.code-tab { padding: 10px 20px; background: white; display: inline-block; width: fit-content; font-size: 0.8rem; font-weight: 700; border-right: 1px solid #f1f5f9; border-top: 2px solid var(--primary); }
+.code-content { flex: 1; padding: 30px; font-family: 'Consolas', monospace; font-size: 0.9rem; overflow-y: auto; background: #ffffff; color: #334155; }
+.code-footer { padding: 15px 30px; border-top: 1px solid #f1f5f9; background: white; text-align: right; }
+.code-footer a { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 0.85rem; }
+
+/* 코드 하이라이트 느낌 */
+.keyword { color: #c678dd; font-weight: 700; }
+.function { color: #61afef; }
+.string { color: #98c379; }
+.comment { color: #abb2bf; font-style: italic; }
