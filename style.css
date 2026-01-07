@@ -425,94 +425,77 @@ nav.scrolled {
     font-weight: 600;
 }
 
-/* 프로젝트 카드 */
+/* 프로젝트 섹션 - 박스 카드 스타일 */
 .projects-section {
     background: white;
 }
 
-.project-card {
+.project-box-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    margin-bottom: 100px;
-}
-
-.project-card.reverse {
-    direction: rtl;
-}
-
-.project-card.reverse > * {
-    direction: ltr;
-}
-
-.project-image {
-    position: relative;
-    border-radius: 20px;
+    background: white;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 40px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
 }
 
-.project-image img {
+.project-box-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.project-box-image {
+    position: relative;
+    overflow: hidden;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.project-box-image img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-image img {
+.project-box-card:hover .project-box-image img {
     transform: scale(1.05);
 }
 
-.project-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(99, 102, 241, 0.9);
+.project-box-content {
+    padding: 50px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
 }
 
-.project-card:hover .project-overlay {
-    opacity: 1;
-}
-
-.project-link {
-    width: 60px;
-    height: 60px;
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    font-size: 1.5rem;
-    transition: transform 0.3s;
-}
-
-.project-link:hover {
-    transform: scale(1.1);
-}
-
-.project-number {
+.project-label {
+    display: inline-block;
     color: var(--primary);
     font-weight: 700;
-    font-size: 0.9rem;
-    display: block;
+    font-size: 0.85rem;
     margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
-.project-info h3 {
-    font-size: 2rem;
+.project-box-content h3 {
+    font-size: 1.8rem;
     margin-bottom: 20px;
+    color: var(--dark);
 }
 
-.project-info p {
+.project-box-content p {
     color: var(--slate);
     line-height: 1.8;
     margin-bottom: 25px;
+    font-size: 1rem;
 }
 
 .project-tags {
@@ -523,32 +506,50 @@ nav.scrolled {
 }
 
 .project-tags span {
-    background: var(--light);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.85rem;
-    color: var(--primary);
     font-weight: 600;
+    border: 2px solid #e2e8f0;
 }
 
-.project-links {
+.project-actions {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
-.btn-link {
+.btn-project {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: var(--dark);
+    padding: 12px 24px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.3s;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background: var(--gradient);
+    color: white;
 }
 
-.btn-link:hover {
-    color: var(--primary);
+.btn-project:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.btn-project.secondary {
+    background: white;
+    border: 2px solid var(--dark);
+    color: var(--dark);
+}
+
+.btn-project.secondary:hover {
+    background: var(--dark);
+    color: white;
 }
 
 /* 푸터 / 연락 섹션 */
@@ -635,9 +636,9 @@ nav.scrolled {
 }
 
 /* 반응형 */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
     .hero-container,
-    .project-card {
+    .project-box-card {
         grid-template-columns: 1fr;
     }
     
@@ -652,5 +653,17 @@ nav.scrolled {
     .nav-links {
         gap: 1.5rem;
         font-size: 0.85rem;
+    }
+    
+    .project-box-image {
+        min-height: 300px;
+    }
+    
+    .project-box-content {
+        padding: 30px;
+    }
+    
+    .project-box-content h3 {
+        font-size: 1.5rem;
     }
 }
