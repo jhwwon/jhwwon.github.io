@@ -82,15 +82,15 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--nav-bg);
     backdrop-filter: blur(20px);
     z-index: 1000;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav.scrolled {
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--nav-bg);
     box-shadow: var(--shadow-sm);
 }
 
@@ -104,7 +104,7 @@ nav.scrolled {
 .logo {
     font-size: 1.5rem;
     font-weight: 900;
-    color: var(--dark);
+    color: var(--text-main);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -150,8 +150,8 @@ nav.scrolled {
 }
 
 .nav-cta {
-    background: var(--dark);
-    color: var(--white) !important;
+    background: var(--text-main);
+    color: var(--bg-main) !important;
     padding: 10px 24px;
     border-radius: 50px;
 }
@@ -167,7 +167,7 @@ nav.scrolled {
     align-items: center;
     padding: 100px 0 50px;
     position: relative;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e3e7f1 100%);
+    background: var(--bg-section);
 }
 
 .hero-particles {
