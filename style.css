@@ -4,37 +4,33 @@
     --accent: #10b981;
     --accent-pink: #ec4899;
     --dark: #0f172a;
-    --dark-light: #1e293b;
     --slate: #64748b;
-    --slate-light: #94a3b8;
     --light: #f8fafc;
     --white: #ffffff;
     --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-warm: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
 
-    /* Theme Variables */
+    /* Theme Variables - Default Light */
     --bg-main: #f8fafc;
     --bg-card: #ffffff;
     --bg-section: linear-gradient(135deg, #f5f7fa 0%, #e3e7f1 100%);
     --text-main: #0f172a;
     --text-muted: #64748b;
     --border-color: #e2e8f0;
-    --nav-bg: rgba(255, 255, 255, 0.8);
+    --nav-bg: rgba(255, 255, 255, 0.85);
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 [data-theme='dark'] {
-    --bg-main: #0b0f1a;
-    --bg-card: #161b2a;
-    --bg-section: linear-gradient(135deg, #0f172a 0%, #0b0f1a 100%);
-    --text-main: #f1f5f9;
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --bg-section: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+    --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --border-color: #1e293b;
-    --nav-bg: rgba(15, 23, 42, 0.8);
-    --white: #0f172a;
-    --light: #0b0f1a;
+    --border-color: #334155;
+    --nav-bg: rgba(15, 23, 42, 0.9);
 }
 
 * {
@@ -199,10 +195,9 @@ nav.scrolled {
 .hero-text .highlight {
     background: var(--gradient);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
     filter: brightness(1.2);
-    /* 다크 모드에서 더 선명하게 */
 }
 
 .hero-subtitle {
@@ -603,8 +598,8 @@ nav.scrolled {
 
 /* GitHub 통계 섹션 */
 .github-section {
-    background: #0d1117;
-    color: white;
+    background: var(--bg-section);
+    color: var(--text-main);
 }
 
 .github-section .section-header h2,
@@ -936,4 +931,59 @@ nav.scrolled {
     .tech-badges {
         justify-content: center;
     }
+}
+
+/* 테마 토글 버튼 스타일 (전역) */
+.theme-toggle {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+}
+
+[data-theme='dark'] .fa-moon {
+    display: none;
+}
+
+[data-theme='dark'] .fa-sun {
+    display: block;
+}
+
+[data-theme='light'] .fa-moon {
+    display: block;
+}
+
+[data-theme='light'] .fa-sun {
+    display: none;
+}
+
+.fa-sun {
+    display: none;
+}
+
+/* 다크모드 전역 강제 색상 규정 */
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] .tech-category h3 {
+    color: #f8fafc !important;
+}
+
+[data-theme='dark'] .section-header p,
+[data-theme='dark'] .hero-subtitle,
+[data-theme='dark'] .project-box-content p {
+    color: #cbd5e1 !important;
+}
+
+[data-theme='dark'] .tech-category h3 i {
+    color: var(--primary) !important;
 }
