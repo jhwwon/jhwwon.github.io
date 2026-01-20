@@ -11,32 +11,34 @@
     --white: #ffffff;
     --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --gradient-warm: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-    --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
-    --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body { 
+body {
     background: var(--light);
-    color: var(--dark); 
+    color: var(--dark);
     font-family: 'Noto Sans KR', 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 
-h1, h2, h3 { 
+h1,
+h2,
+h3 {
     font-family: 'Poppins', 'Noto Sans KR', sans-serif;
     font-weight: 700;
     line-height: 1.2;
 }
 
-.container { 
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 5%;
@@ -62,7 +64,7 @@ nav {
     backdrop-filter: blur(20px);
     z-index: 1000;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 nav.scrolled {
@@ -152,7 +154,7 @@ nav.scrolled {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: 
+    background-image:
         radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
 }
@@ -165,9 +167,10 @@ nav.scrolled {
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     margin-bottom: 30px;
-    line-height: 1.1;
+    line-height: 1.2;
+    word-break: keep-all;
 }
 
 .hero-text .highlight {
@@ -271,8 +274,15 @@ nav.scrolled {
 }
 
 @keyframes morph {
-    0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-    50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+
+    0%,
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    50% {
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    }
 }
 
 .profile-ring {
@@ -285,8 +295,13 @@ nav.scrolled {
 }
 
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .status-badge {
@@ -311,8 +326,15 @@ nav.scrolled {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
 }
 
 .scroll-indicator {
@@ -330,8 +352,15 @@ nav.scrolled {
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(10px); }
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
 }
 
 /* 섹션 공통 */
@@ -795,7 +824,7 @@ nav.scrolled {
 
 .footer-bottom {
     padding-top: 40px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-bottom p {
@@ -819,6 +848,7 @@ nav.scrolled {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -827,40 +857,41 @@ nav.scrolled {
 
 /* 반응형 */
 @media (max-width: 968px) {
+
     .hero-container,
     .project-box-card {
         grid-template-columns: 1fr;
     }
-    
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .hero-text h1 {
         font-size: 2.5rem;
     }
-    
+
     .nav-links {
         gap: 1.5rem;
         font-size: 0.85rem;
     }
-    
+
     .project-box-image {
         min-height: 300px;
     }
-    
+
     .project-box-content {
         padding: 30px;
     }
-    
+
     .project-box-content h3 {
         font-size: 1.5rem;
     }
-    
+
     .github-stats {
         grid-template-columns: 1fr;
     }
-    
+
     .project-highlights {
         grid-template-columns: 1fr;
     }
@@ -870,12 +901,12 @@ nav.scrolled {
     .tech-category {
         padding: 25px;
     }
-    
+
     .tech-badge {
         padding: 10px 16px;
         font-size: 0.85rem;
     }
-    
+
     .tech-badges {
         justify-content: center;
     }
