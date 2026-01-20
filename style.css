@@ -595,20 +595,20 @@ nav.scrolled {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
-
+ㅁ
 /* GitHub 통계 섹션 */
 .github-section {
-    background: var(--bg-section);
+    backgrㅃound: var(--bg-section);
     color: var(--text-main);
 }
 
 .github-section .section-header h2,
 .github-section .section-header .section-number {
-    color: white;
+    color: var(--text-main);
 }
 
 .github-section .section-header p {
-    color: var(--slate-light);
+    color: var(--text-muted);
 }
 
 .github-stats {
