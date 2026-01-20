@@ -482,7 +482,7 @@ nav.scrolled {
 
 /* 기술 스택 섹션 */
 .skills-section {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e3e7f1 100%);
+    background: var(--bg-section);
 }
 
 .tech-categories {
