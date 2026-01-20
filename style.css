@@ -161,8 +161,8 @@ nav.scrolled {
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 30px;
     align-items: center;
 }
 
