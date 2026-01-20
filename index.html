@@ -30,6 +30,13 @@
                 <li><a href="#projects">WORKS</a></li>
                 <li><a href="https://watermel32.tistory.com" target="_blank">BLOG</a></li>
                 <li><a href="#contact" class="nav-cta">CONTACT</a></li>
+                <!-- 테마 토글 버튼 추가 -->
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -570,6 +577,36 @@
             document.getElementById("progressBar").style.width = scrolled + "%";
         };
 
+        // 테마 제어 로직
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', savedTheme);
+        updateIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        function updateIcon(theme) {
+            const moonIcon = themeToggle.querySelector('.fa-moon');
+            const sunIcon = themeToggle.querySelector('.fa-sun');
+
+            if (theme === 'dark') {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'block';
+            } else {
+                moonIcon.style.display = 'block';
+                sunIcon.style.display = 'none';
+            }
+        }
+
         // 네비게이션 스크롤 효과
         window.addEventListener('scroll', function () {
             const nav = document.getElementById('navbar');
@@ -595,5 +632,4 @@
         });
     </script>
 </body>
-
 </html>
