@@ -58,6 +58,7 @@ h3 {
     font-family: 'Poppins', 'Noto Sans KR', sans-serif;
     font-weight: 700;
     line-height: 1.2;
+    color: var(--text-main);
 }
 
 .container {
@@ -200,6 +201,8 @@ nav.scrolled {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: brightness(1.2);
+    /* 다크 모드에서 더 선명하게 */
 }
 
 .hero-subtitle {
@@ -453,6 +456,7 @@ nav.scrolled {
 .skill-card h3 {
     font-size: 1.4rem;
     margin-bottom: 15px;
+    color: var(--text-main);
 }
 
 .skill-card p {
@@ -704,7 +708,7 @@ nav.scrolled {
 .project-box-content h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: var(--dark);
+    color: var(--text-main);
 }
 
 .project-box-content p {
@@ -747,7 +751,7 @@ nav.scrolled {
 }
 
 .project-tags span {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -755,7 +759,7 @@ nav.scrolled {
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--border-color);
 }
 
 .project-actions {
