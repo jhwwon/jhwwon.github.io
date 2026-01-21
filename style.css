@@ -591,6 +591,31 @@ nav.scrolled {
     color: white;
 }
 
+.tech-badge.react {
+    background: linear-gradient(135deg, #61DAFB 0%, #4fa8c5 100%);
+    color: #000;
+}
+
+.tech-badge.typescript {
+    background: linear-gradient(135deg, #3178C6 0%, #2768b2 100%);
+    color: white;
+}
+
+.tech-badge.jira {
+    background: linear-gradient(135deg, #0052CC 0%, #0747a6 100%);
+    color: white;
+}
+
+.tech-badge.slack {
+    background: linear-gradient(135deg, #4A154B 0%, #611f69 100%);
+    color: white;
+}
+
+.tech-badge.notion {
+    background: linear-gradient(135deg, #000000 0%, #2c2c2c 100%);
+    color: white;
+}
+
 .tech-badge:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
@@ -988,4 +1013,19 @@ nav.scrolled {
 
 [data-theme='dark'] .tech-category h3 i {
     color: var(--primary) !important;
+}
+
+/* 다크모드에서 모든 섹션 배경 강제 적용 */
+[data-theme='dark'] .section {
+    background: var(--bg-main) !important;
+}
+
+[data-theme='dark'] .projects-section {
+    background: var(--bg-main) !important;
+}
+
+[data-theme='dark'] .skills-section,
+[data-theme='dark'] .hero-section,
+[data-theme='dark'] .github-section {
+    background: var(--bg-section) !important;
 }
