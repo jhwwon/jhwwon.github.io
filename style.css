@@ -594,11 +594,13 @@ nav.scrolled {
 .tech-badge.react {
     background: linear-gradient(135deg, #61DAFB 0%, #4fa8c5 100%);
     color: #000;
+    border: 2px solid #61DAFB;
 }
 
 .tech-badge.typescript {
     background: linear-gradient(135deg, #3178C6 0%, #2768b2 100%);
     color: white;
+    border: 2px solid #3178C6;
 }
 
 .tech-badge.jira {
@@ -903,7 +905,6 @@ nav.scrolled {
     }
 }
 
-/* 반응형 */
 @media (max-width: 968px) {
 
     .hero-container,
@@ -916,24 +917,24 @@ nav.scrolled {
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .nav-links {
-        gap: 1.5rem;
-        font-size: 0.85rem;
+        gap: 1.2rem;
+        font-size: 0.8rem;
     }
 
     .project-box-image {
-        min-height: 300px;
+        min-height: 250px;
     }
 
     .project-box-content {
-        padding: 30px;
+        padding: 25px;
     }
 
     .project-box-content h3 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .github-stats {
@@ -943,20 +944,142 @@ nav.scrolled {
     .project-highlights {
         grid-template-columns: 1fr;
     }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stat-item strong {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        display: none;
+        /* 모바일에서는 숨김 - 추후 햄버거 메뉴로 대체 가능 */
+    }
+
+    .theme-toggle {
+        margin-left: auto;
+    }
+
     .tech-category {
-        padding: 25px;
+        padding: 20px;
     }
 
     .tech-badge {
-        padding: 10px 16px;
-        font-size: 0.85rem;
+        padding: 8px 14px;
+        font-size: 0.8rem;
     }
 
     .tech-badges {
         justify-content: center;
+        gap: 10px;
+    }
+
+    .project-box-content {
+        padding: 20px;
+    }
+
+    .project-box-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-box-content p {
+        font-size: 0.9rem;
+    }
+
+    .project-tags {
+        gap: 8px;
+    }
+
+    .project-tags span {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+
+    .btn,
+    .btn-project {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .project-box-image {
+        min-height: 200px;
+    }
+
+    .tech-category h3 {
+        font-size: 1.2rem;
+    }
+
+    .tech-badge {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+
+    .project-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-actions .btn-project {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .github-card img {
+        width: 100%;
+        height: auto;
     }
 }
 
