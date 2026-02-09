@@ -241,23 +241,43 @@ nav.scrolled {
     margin-top: 10px;
 }
 
+
 .hero-btns .btn,
 .hero-btns .btn-outline {
-    min-width: 150px;
+    min-width: 160px;
     min-height: 64px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     font-weight: 700;
     letter-spacing: 0.01em;
     text-align: center;
-    line-height: 1.3;
-    padding: 0 28px;
+    line-height: 1.4;
+    padding: 0 32px;
     border-radius: 32px;
     box-sizing: border-box;
     transition: all 0.2s;
+    gap: 10px;
+}
+
+.hero-btns .btn i,
+.hero-btns .btn-outline i {
+    margin-bottom: 0;
+    margin-right: 8px;
+    font-size: 1.15em;
+    vertical-align: middle;
+}
+
+.hero-btns .btn span,
+.hero-btns .btn-outline span {
+    display: inline;
+    font-size: 1.08em;
+    font-weight: 700;
+    vertical-align: middle;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
 }
 
 .hero-btns .btn i,
@@ -273,12 +293,15 @@ nav.scrolled {
     font-weight: 700;
 }
 
+
 .hero-btns .btn-outline {
     border: 2px solid var(--primary);
     color: var(--primary);
     background: var(--bg-main);
     box-shadow: none;
+    font-weight: 600;
 }
+
 
 .hero-btns .btn-outline:hover {
     background: var(--primary);
@@ -286,10 +309,12 @@ nav.scrolled {
     border-color: var(--primary-dark);
 }
 
+
 .hero-btns .btn-primary {
     background: var(--gradient);
     color: #fff;
     box-shadow: 0 4px 15px rgba(99, 102, 241, 0.18);
+    font-weight: 700;
 }
 
 .hero-btns .btn-primary:hover {
