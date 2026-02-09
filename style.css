@@ -232,85 +232,9 @@ nav.scrolled {
     margin-top: 5px;
 }
 
-/* 히어로 버튼 그룹 개선 */
 .hero-btns {
     display: flex;
-    gap: 24px;
-    align-items: stretch;
-    justify-content: flex-start;
-    margin-top: 10px;
-}
-
-
-.hero-btns .btn,
-.hero-btns .btn-outline {
-    min-width: 160px;
-    min-height: 64px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.08rem;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    text-align: center;
-    line-height: 1.4;
-    padding: 0 32px;
-    border-radius: 32px;
-    box-sizing: border-box;
-    transition: all 0.2s;
-    gap: 10px;
-}
-
-.hero-btns .btn i,
-.hero-btns .btn-outline i {
-    margin-bottom: 0;
-    margin-right: 8px;
-    font-size: 1.15em;
-    vertical-align: middle;
-}
-
-.hero-btns .btn span,
-.hero-btns .btn-outline span {
-    display: inline;
-    font-size: 1.08em;
-    font-weight: 700;
-    vertical-align: middle;
-    line-height: 1.4;
-    letter-spacing: 0.01em;
-}
-
-.hero-btns .btn i,
-.hero-btns .btn-outline i {
-    margin-bottom: 6px;
-    font-size: 1.2em;
-}
-
-.hero-btns .btn span,
-.hero-btns .btn-outline span {
-    display: block;
-    font-size: 1em;
-    font-weight: 700;
-}
-
-
-.hero-btns .btn i,
-.hero-btns .btn-outline i {
-    margin-right: 8px;
-    margin-bottom: 0;
-    font-size: 1.15em;
-    vertical-align: middle;
-    display: inline-block;
-}
-.hero-btns .btn span,
-.hero-btns .btn-outline span {
-    display: inline-block;
-    font-size: 1.08em;
-    font-weight: 700;
-    vertical-align: middle;
-    line-height: 1.4;
-    letter-spacing: 0.01em;
-    white-space: nowrap;
+    gap: 20px;
 }
 
 .btn {
@@ -346,4 +270,901 @@ nav.scrolled {
     color: white;
 }
 
-/* ...existing code... */
+/* 프로필 카드 */
+.profile-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image-wrapper {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.main-profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: var(--shadow-lg);
+    animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+
+    0%,
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    50% {
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    }
+}
+
+.profile-ring {
+    position: absolute;
+    inset: -15px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    opacity: 0.3;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.status-badge {
+    margin-top: 30px;
+    background: var(--bg-card);
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow-md);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+/* 섹션 공통 */
+.section {
+    padding: 120px 0;
+}
+
+.section-header {
+    margin-bottom: 80px;
+}
+
+.section-number {
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+/* 스킬 카드 */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.skill-card {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border: 2px solid var(--border-color);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.skill-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.skill-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.skill-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.skill-card p {
+    color: var(--text-main);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tags span {
+    background: var(--light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* 기술 스택 섹션 */
+.skills-section {
+    background: var(--bg-section);
+}
+
+.tech-categories {
+    display: grid;
+    gap: 40px;
+}
+
+.tech-category {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.tech-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tech-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tech-category h3 i {
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.tech-badge i {
+    font-size: 1.1rem;
+}
+
+/* 언어별 색상 */
+.tech-badge.java {
+    background: linear-gradient(135deg, #ED8B00 0%, #f59c1a 100%);
+    color: white;
+}
+
+.tech-badge.python {
+    background: linear-gradient(135deg, #3776AB 0%, #4b8bbe 100%);
+    color: white;
+}
+
+.tech-badge.r {
+    background: linear-gradient(135deg, #276DC3 0%, #3a7dd6 100%);
+    color: white;
+}
+
+.tech-badge.html {
+    background: linear-gradient(135deg, #E34F26 0%, #f05a31 100%);
+    color: white;
+}
+
+.tech-badge.css {
+    background: linear-gradient(135deg, #1572B6 0%, #2184c9 100%);
+    color: white;
+}
+
+.tech-badge.js {
+    background: linear-gradient(135deg, #F7DF1E 0%, #f8e554 100%);
+    color: #000;
+}
+
+.tech-badge.spring {
+    background: linear-gradient(135deg, #6DB33F 0%, #7dc24f 100%);
+    color: white;
+}
+
+.tech-badge.mybatis,
+.tech-badge.oracle,
+.tech-badge.mysql,
+.tech-badge.mariadb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.tech-badge.intellij,
+.tech-badge.eclipse,
+.tech-badge.git,
+.tech-badge.github,
+.tech-badge.jupyter,
+.tech-badge.gradle,
+.tech-badge.maven {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+}
+
+.tech-badge.react {
+    background: linear-gradient(135deg, #61DAFB 0%, #4fa8c5 100%);
+    color: #000;
+    border: 2px solid #61DAFB;
+}
+
+.tech-badge.typescript {
+    background: linear-gradient(135deg, #3178C6 0%, #2768b2 100%);
+    color: white;
+    border: 2px solid #3178C6;
+}
+
+.tech-badge.jira {
+    background: linear-gradient(135deg, #0052CC 0%, #0747a6 100%);
+    color: white;
+}
+
+.tech-badge.slack {
+    background: linear-gradient(135deg, #4A154B 0%, #611f69 100%);
+    color: white;
+}
+
+.tech-badge.notion {
+    background: linear-gradient(135deg, #000000 0%, #2c2c2c 100%);
+    color: white;
+}
+
+.tech-badge:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* GitHub 통계 섹션 */
+.github-section {
+    background: var(--bg-section);
+    color: var(--text-main);
+}
+
+.github-section .section-header h2,
+.github-section .section-header .section-number {
+    color: var(--text-main) !important;
+}
+
+.github-section .section-header p {
+    color: var(--text-muted) !important;
+}
+
+.github-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.github-card {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.github-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.2);
+}
+
+.github-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.projects-section {
+    background: var(--bg-main);
+}
+
+.project-box-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--bg-card);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 40px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.project-box-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.project-box-image {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-main);
+    min-height: 400px;
+}
+
+.project-box-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+    transition: transform 0.5s ease;
+}
+
+.project-box-card:hover .project-box-image img {
+    transform: scale(1.05);
+}
+
+/* YouTube 비디오 반응형 */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 360px;
+    border: none;
+    border-radius: 12px;
+}
+
+.project-box-content {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.project-label {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.project-box-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.project-box-content p {
+    color: var(--text-main);
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* 프로젝트 하이라이트 */
+.project-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: var(--bg-main);
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.highlight-item i {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.project-tags span {
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 2px solid var(--border-color);
+}
+
+.project-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-project {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background: var(--gradient);
+    color: white;
+}
+
+.btn-project:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.btn-project.secondary {
+    background: var(--bg-card);
+    border: 2px solid var(--text-main);
+    color: var(--text-main);
+}
+
+.btn-project.secondary:hover {
+    background: var(--text-main);
+    color: var(--bg-main);
+}
+
+/* 푸터 / 연락 섹션 */
+.contact-section {
+    background: var(--dark);
+    color: white;
+    padding: 100px 0 50px;
+    text-align: center;
+}
+
+.contact-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contact-content p {
+    font-size: 1.2rem;
+    color: var(--slate-light);
+    margin-bottom: 60px;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.contact-item span {
+    font-size: 0.95rem;
+    color: var(--slate-light);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: var(--slate-light);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.footer-tagline {
+    font-style: italic;
+    color: var(--primary);
+}
+
+/* 애니메이션 */
+.fade-in {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 968px) {
+
+    .hero-container,
+    .project-box-card {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .nav-links {
+        gap: 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    .project-box-image {
+        min-height: 250px;
+    }
+
+    .project-box-content {
+        padding: 25px;
+    }
+
+    .project-box-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .github-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .project-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stat-item strong {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        display: none;
+        /* 모바일에서는 숨김 - 추후 햄버거 메뉴로 대체 가능 */
+    }
+
+    .theme-toggle {
+        margin-left: auto;
+    }
+
+    .tech-category {
+        padding: 20px;
+    }
+
+    .tech-badge {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
+    .tech-badges {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .project-box-content {
+        padding: 20px;
+    }
+
+    .project-box-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-box-content p {
+        font-size: 0.9rem;
+    }
+
+    .project-tags {
+        gap: 8px;
+    }
+
+    .project-tags span {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+
+    .btn,
+    .btn-project {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .project-box-image {
+        min-height: 200px;
+    }
+
+    .tech-category h3 {
+        font-size: 1.2rem;
+    }
+
+    .tech-badge {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+
+    .project-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-actions .btn-project {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .github-card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* 테마 토글 버튼 스타일 (전역) */
+.theme-toggle {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+}
+
+[data-theme='dark'] .fa-moon {
+    display: none;
+}
+
+[data-theme='dark'] .fa-sun {
+    display: block;
+}
+
+[data-theme='light'] .fa-moon {
+    display: block;
+}
+
+[data-theme='light'] .fa-sun {
+    display: none;
+}
+
+.fa-sun {
+    display: none;
+}
+
+/* 다크모드 전역 강제 색상 규정 */
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] .tech-category h3 {
+    color: #f8fafc !important;
+}
+
+[data-theme='dark'] .section-header p,
+[data-theme='dark'] .hero-subtitle,
+[data-theme='dark'] .project-box-content p {
+    color: #cbd5e1 !important;
+}
+
+[data-theme='dark'] .tech-category h3 i {
+    color: var(--primary) !important;
+}
+
+/* 다크모드에서 모든 섹션 배경 강제 적용 */
+[data-theme='dark'] .section {
+    background: var(--bg-main) !important;
+}
+
+[data-theme='dark'] .projects-section {
+    background: var(--bg-main) !important;
+}
+
+[data-theme='dark'] .skills-section,
+[data-theme='dark'] .hero-section,
+[data-theme='dark'] .github-section {
+    background: var(--bg-section) !important;
+}
