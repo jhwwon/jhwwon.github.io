@@ -294,32 +294,23 @@ nav.scrolled {
 }
 
 
-.hero-btns .btn-outline {
-    border: 2px solid var(--primary);
-    color: var(--primary);
-    background: var(--bg-main);
-    box-shadow: none;
-    font-weight: 600;
+.hero-btns .btn i,
+.hero-btns .btn-outline i {
+    margin-right: 8px;
+    margin-bottom: 0;
+    font-size: 1.15em;
+    vertical-align: middle;
+    display: inline-block;
 }
-
-
-.hero-btns .btn-outline:hover {
-    background: var(--primary);
-    color: #fff;
-    border-color: var(--primary-dark);
-}
-
-
-.hero-btns .btn-primary {
-    background: var(--gradient);
-    color: #fff;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.18);
+.hero-btns .btn span,
+.hero-btns .btn-outline span {
+    display: inline-block;
+    font-size: 1.08em;
     font-weight: 700;
-}
-
-.hero-btns .btn-primary:hover {
-    filter: brightness(1.08);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.22);
+    vertical-align: middle;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
 }
 
 .btn {
