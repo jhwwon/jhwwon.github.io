@@ -248,6 +248,7 @@ nav.scrolled {
     gap: 10px;
     transition: all 0.3s ease;
     font-size: 1rem;
+    white-space: nowrap;
 }
 
 .btn-primary {
