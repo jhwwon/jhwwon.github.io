@@ -1170,3 +1170,14 @@ nav.scrolled {
 [data-theme='dark'] .github-section {
     background: var(--bg-section) !important;
 }
+
+/* 다크모드에서 btn-outline 버튼 보이도록 */
+[data-theme='dark'] .btn-outline {
+    border-color: var(--text-main) !important;
+    color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .btn-outline:hover {
+    background: var(--text-main) !important;
+    color: var(--dark) !important;
+}
