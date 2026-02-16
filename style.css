@@ -741,17 +741,17 @@ nav.scrolled {
 .image-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 400px;
     padding: 20px;
-    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .image-wrapper img {
     width: 100%;
-    height: 360px;
+    height: 100%;
     object-fit: cover;
     border-radius: 12px;
 }
@@ -973,13 +973,15 @@ nav.scrolled {
         min-height: 250px;
     }
 
-    .video-wrapper,
-    .image-wrapper {
+    .video-wrapper {
         min-height: 250px;
     }
 
-    .video-wrapper iframe,
-    .image-wrapper img {
+    .image-wrapper {
+        height: 250px;
+    }
+
+    .video-wrapper iframe {
         height: 220px;
     }
 
@@ -1112,13 +1114,15 @@ nav.scrolled {
         min-height: 200px;
     }
 
-    .video-wrapper,
-    .image-wrapper {
+    .video-wrapper {
         min-height: 200px;
     }
 
-    .video-wrapper iframe,
-    .image-wrapper img {
+    .image-wrapper {
+        height: 200px;
+    }
+
+    .video-wrapper iframe {
         height: 180px;
     }
 
