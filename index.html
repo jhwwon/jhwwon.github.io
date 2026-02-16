@@ -358,7 +358,7 @@
                         <a href="https://github.com/jhwwon/BankSystemProject" target="_blank" class="btn-project">
                             <i class="fab fa-github"></i> View Code
                         </a>
-                        <a href="#" class="btn-project secondary">
+                        <a href="#" class="btn-project secondary" onclick="openModal('modal-bank'); return false;">
                             <i class="fas fa-ellipsis-h"></i> More
                         </a>
                     </div>
@@ -523,6 +523,101 @@
                 <div class="modal-section">
                     <h3><i class="fas fa-lightbulb"></i> 결과 및 회고</h3>
                     <p class="modal-reflection">FTP 클라이언트와 서버간의 통신을 통해 소켓 프로그래밍의 기초와 파일 전송 설계 단계를 구현함으로써 통신의 기본적인 개념을 학습할 수 있었습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 은행 계좌 관리 시스템 모달 -->
+    <div id="modal-bank" class="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <span class="modal-label">PROJECT DETAILS</span>
+                <h2>은행 계좌 관리 시스템</h2>
+            </div>
+            <div class="modal-body">
+                <!-- 주요 기술 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-code"></i> 주요 기술</h3>
+                    <div class="modal-tech-badges">
+                        <span class="modal-badge">Java</span>
+                        <span class="modal-badge">Oracle</span>
+                    </div>
+                </div>
+
+                <!-- 주요 기능 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-list-check"></i> 주요 기능</h3>
+                    <ul class="modal-list">
+                        <li><strong>회원가입 및 로그인</strong> - 사용자/관리자 권한 분리</li>
+                        <li><strong>계좌 관리</strong> - 계좌 생성, 조회, 해지, 비밀번호 변경</li>
+                        <li><strong>입출금 기능</strong> - 안전한 입금/출금 처리</li>
+                        <li><strong>이체 기능</strong> - 계좌 간 이체 (트랜잭션 처리)</li>
+                        <li><strong>거래 한도 관리</strong> - 거래 유형별 1회/1일 한도 설정 및 실시간 추적</li>
+                        <li><strong>이자 계산 시스템</strong> - 계좌 종류별 차등 이자율 적용</li>
+                        <li><strong>자동 이자 지급</strong> - 매월 마지막 날 자동 이자 지급 스케줄러</li>
+                        <li><strong>거래내역 조회</strong> - 상세한 거래 내역 및 이자 지급 내역 조회</li>
+                        <li><strong>관리자 기능</strong> - 전체 계좌 조회, 수동 이자 지급, 시스템 모니터링</li>
+                        <li><strong>시스템 안정성</strong> - 놓친 이자 지급 자동 감지 및 보완</li>
+                    </ul>
+                </div>
+
+                <!-- 핵심 구현 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-cogs"></i> 핵심 구현</h3>
+                    <ul class="modal-list">
+                        <li><strong>MVC 패턴 적용</strong> - Entity, Manager, Helper 클래스로 역할 분리</li>
+                        <li><strong>트랜잭션 처리</strong> - 이체 시 데이터 정합성 보장 (commit/rollback)</li>
+                        <li><strong>자동 스케줄러</strong> - Timer/TimerTask로 매월 이자 자동 지급</li>
+                        <li><strong>이자 계산 시스템</strong> - 정확한 이자 계산 공식 및 경과일수 계산</li>
+                        <li><strong>거래 한도 관리</strong> - 실시간 한도 추적 및 사용자 안내</li>
+                        <li><strong>데이터베이스 연동</strong> - JDBC, PreparedStatement로 안전한 DB 처리</li>
+                        <li><strong>모듈화 설계</strong> - 단일 책임 원칙 적용으로 유지보수성 향상</li>
+                        <li><strong>에러 처리</strong> - 시스템 중단 시 놓친 이자 지급 자동 보완</li>
+                    </ul>
+                </div>
+
+                <!-- 트러블슈팅 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-bug"></i> 트러블슈팅</h3>
+                    <div class="troubleshoot-item">
+                        <div class="trouble-problem">
+                            <span class="trouble-label">문제</span>
+                            출금 성공 후 입금 실패 시 잔액 불일치 문제
+                        </div>
+                        <div class="trouble-solution">
+                            <span class="trouble-label solution">해결</span>
+                            트랜잭션 처리로 해결
+                        </div>
+                    </div>
+                    <div class="troubleshoot-item">
+                        <div class="trouble-problem">
+                            <span class="trouble-label">문제</span>
+                            시스템 중단 시 이자 지급 시점을 놓치는 문제
+                        </div>
+                        <div class="trouble-solution">
+                            <span class="trouble-label solution">해결</span>
+                            시스템 시작 시 놓친 지급 자동 감지 및 보완
+                        </div>
+                    </div>
+                    <div class="troubleshoot-item">
+                        <div class="trouble-problem">
+                            <span class="trouble-label">문제</span>
+                            거래 유형별 다른 한도 정책의 일관성 부족
+                        </div>
+                        <div class="trouble-solution">
+                            <span class="trouble-label solution">해결</span>
+                            상수 정의 및 통합 체크 메서드로 해결
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 결과 및 회고 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-lightbulb"></i> 결과 및 회고</h3>
+                    <p class="modal-reflection">거래 한도, 이자율 등 실제 금융 시스템의 비즈니스 로직을 조사하고 구현해봄으로써 좀 더 실무 수준에 가까운 시스템을 구축해볼 수 있어 좋은 경험이었습니다.</p>
                 </div>
             </div>
         </div>
