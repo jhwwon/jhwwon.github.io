@@ -1397,6 +1397,29 @@ nav.scrolled {
     border-left: 4px solid var(--primary);
 }
 
+/* 데이터셋 링크 스타일 */
+.modal-dataset-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #20beff 0%, #1a9fd4 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.modal-dataset-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(32, 190, 255, 0.3);
+}
+
+.modal-dataset-link i {
+    font-size: 1.2rem;
+}
+
 /* 모달 반응형 */
 @media (max-width: 768px) {
     .modal-content {
