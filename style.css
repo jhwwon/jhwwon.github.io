@@ -757,6 +757,7 @@ nav.scrolled {
 }
 
 .project-box-content {
+    position: relative;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -771,6 +772,20 @@ nav.scrolled {
     font-size: 0.85rem;
     margin-bottom: 15px;
     letter-spacing: 1px;
+}
+
+/* 개발기간 배지 */
+.project-period {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
 }
 
 .project-box-content h3 {
@@ -1281,6 +1296,7 @@ nav.scrolled {
         transform: translateY(-30px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
