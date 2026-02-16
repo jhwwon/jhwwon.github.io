@@ -494,7 +494,6 @@
                         <li><strong>디렉토리 관리</strong> - ls/cd 명령어로 서버 디렉토리 탐색 및 이동</li>
                         <li><strong>로컬 명령어</strong> - cls/ccd 명령어로 클라이언트 로컬 디렉토리 관리</li>
                         <li><strong>멀티클라이언트 지원</strong> - pthread와 select()를 활용한 동시 다중 클라이언트 연결 처리</li>
-                        <li><strong>대용량 파일 처리</strong> - 65KB 청크 단위로 분할하여 안정적인 파일 전송</li>
                     </ul>
                 </div>
 
@@ -504,7 +503,6 @@
                     <ul class="modal-list">
                         <li><strong>멀티스레딩 아키텍처</strong> - pthread를 사용하여 각 클라이언트별 독립적인 스레드 생성으로 동시성 확보</li>
                         <li><strong>I/O 멀티플렉싱</strong> - select() 시스템 콜을 활용한 효율적인 소켓 이벤트 처리</li>
-                        <li><strong>파일 청킹 시스템</strong> - 대용량 파일을 BUFSIZE(65535) 단위로 분할하여 메모리 효율성과 전송 안정성 확보</li>
                         <li><strong>프로토콜 설계</strong> - 클라이언트-서버 간 명령어 기반 통신 프로토콜 구현</li>
                         <li><strong>표준 출력 리다이렉션</strong> - switchStdout()/revertStdout() 함수로 명령어 실행 결과를 파일로 캡처</li>
                     </ul>
@@ -521,16 +519,6 @@
                         <div class="trouble-solution">
                             <span class="trouble-label solution">해결</span>
                             초기 단일 클라이언트 서버에서 pthread 도입으로 동시 다중 연결 처리 가능
-                        </div>
-                    </div>
-                    <div class="troubleshoot-item">
-                        <div class="trouble-problem">
-                            <span class="trouble-label">문제</span>
-                            대용량 파일 전송 중단 문제
-                        </div>
-                        <div class="trouble-solution">
-                            <span class="trouble-label solution">해결</span>
-                            네트워크 불안정 시 전송 실패를 방지하기 위해 파일을 65KB 청크 단위로 분할 전송하여 안정성 확보
                         </div>
                     </div>
                 </div>
@@ -763,7 +751,7 @@
                 <div class="modal-section">
                     <h3><i class="fas fa-list-check"></i> 주요 기능</h3>
                     <ul class="modal-list">
-                        <li><strong>실시간 AI 채팅</strong> - Gemini 2.0 Flash 모델과의 실시간 대화</li>
+                        <li><strong>실시간 AI 채팅</strong> - Gemini 2.5 Flash 모델과의 실시간 대화</li>
                         <li><strong>말풍선 UI</strong> - 사용자와 AI 메시지를 구분하는 직관적인 채팅 인터페이스</li>
                         <li><strong>타이핑 인디케이터</strong> - AI 응답 대기 중 "답변 중..." 로딩 표시</li>
                         <li><strong>시간 표시</strong> - 각 메시지에 전송 시간 (오전/오후 형식) 표시</li>
