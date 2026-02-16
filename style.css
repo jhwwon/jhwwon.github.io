@@ -737,6 +737,25 @@ nav.scrolled {
     border-radius: 12px;
 }
 
+/* 이미지 래퍼 (비디오와 동일한 스타일) */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
 .project-box-content {
     padding: 50px;
     display: flex;
@@ -954,6 +973,16 @@ nav.scrolled {
         min-height: 250px;
     }
 
+    .video-wrapper,
+    .image-wrapper {
+        min-height: 250px;
+    }
+
+    .video-wrapper iframe,
+    .image-wrapper img {
+        height: 220px;
+    }
+
     .project-box-content {
         padding: 25px;
     }
@@ -1081,6 +1110,16 @@ nav.scrolled {
 
     .project-box-image {
         min-height: 200px;
+    }
+
+    .video-wrapper,
+    .image-wrapper {
+        min-height: 200px;
+    }
+
+    .video-wrapper iframe,
+    .image-wrapper img {
+        height: 180px;
     }
 
     .tech-category h3 {
