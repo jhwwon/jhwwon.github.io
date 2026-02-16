@@ -250,7 +250,7 @@
                         <a href="정혜원_머신러닝프로젝트.pdf" target="_blank" class="btn-project secondary">
                             <i class="fas fa-file-pdf"></i> Report
                         </a>
-                        <a href="#" class="btn-project secondary">
+                        <a href="#" class="btn-project secondary" onclick="openModal('modal-ml'); return false;">
                             <i class="fas fa-ellipsis-h"></i> More
                         </a>
                     </div>
@@ -287,7 +287,7 @@
                         <a href="정혜원_딥러닝_LLM프로젝트.pdf" target="_blank" class="btn-project secondary">
                             <i class="fas fa-file-pdf"></i> Report
                         </a>
-                        <a href="#" class="btn-project secondary">
+                        <a href="#" class="btn-project secondary" onclick="openModal('modal-llm'); return false;">
                             <i class="fas fa-ellipsis-h"></i> More
                         </a>
                     </div>
@@ -385,7 +385,7 @@
                         <a href="https://github.com/jhwwon/MediFlow" target="_blank" class="btn-project">
                             <i class="fab fa-github"></i> View Code
                         </a>
-                        <a href="#" class="btn-project secondary">
+                        <a href="#" class="btn-project secondary" onclick="openModal('modal-mediflow'); return false;">
                             <i class="fas fa-ellipsis-h"></i> More
                         </a>
                     </div>
@@ -413,7 +413,7 @@
                         <a href="https://github.com/jhwwon/HTML-CSS-JS" target="_blank" class="btn-project">
                             <i class="fab fa-github"></i> View Code
                         </a>
-                        <a href="#" class="btn-project secondary">
+                        <a href="#" class="btn-project secondary" onclick="openModal('modal-gemini'); return false;">
                             <i class="fas fa-ellipsis-h"></i> More
                         </a>
                     </div>
@@ -441,7 +441,7 @@
                         <a href="https://github.com/jhwwon/Capstone-Project" target="_blank" class="btn-project">
                             <i class="fab fa-github"></i> View Code
                         </a>
-                        <a href="#" class="btn-project secondary">
+                        <a href="#" class="btn-project secondary" onclick="openModal('modal-capstone'); return false;">
                             <i class="fas fa-ellipsis-h"></i> More
                         </a>
                     </div>
@@ -618,6 +618,386 @@
                 <div class="modal-section">
                     <h3><i class="fas fa-lightbulb"></i> 결과 및 회고</h3>
                     <p class="modal-reflection">거래 한도, 이자율 등 실제 금융 시스템의 비즈니스 로직을 조사하고 구현해봄으로써 좀 더 실무 수준에 가까운 시스템을 구축해볼 수 있어 좋은 경험이었습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MediFlow 병원 ERP 시스템 모달 -->
+    <div id="modal-mediflow" class="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <span class="modal-label">PROJECT DETAILS</span>
+                <h2>MediFlow - 병원 ERP 시스템</h2>
+            </div>
+            <div class="modal-body">
+                <!-- 주요 기술 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-code"></i> 주요 기술</h3>
+                    <div class="modal-tech-badges">
+                        <span class="modal-badge">HTML</span>
+                        <span class="modal-badge">CSS</span>
+                        <span class="modal-badge">JavaScript</span>
+                        <span class="modal-badge">Java</span>
+                        <span class="modal-badge">Oracle</span>
+                        <span class="modal-badge">Servlet</span>
+                        <span class="modal-badge">JSP</span>
+                    </div>
+                </div>
+
+                <!-- 주요 기능 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-list-check"></i> 주요 기능</h3>
+                    <ul class="modal-list">
+                        <li><strong>권한 관리</strong> - 인증·세션·RBAC으로 관리자/매니저/사용자 접근 통제</li>
+                        <li><strong>운영 대시보드</strong> - 실시간 KPI·경보·바로가기 위젯으로 현황 시각화</li>
+                        <li><strong>재고·자재</strong> - 품목 등록·카테고리·저재고 알림·공급업체 연계 자동화</li>
+                        <li><strong>주문·공급망</strong> - 발주 생성~납품 추적·이력 분석 워크플로 전산화</li>
+                        <li><strong>인사·급여</strong> - 직원/부서/직급/급여 CRUD와 승인·명세서 발급 통합</li>
+                        <li><strong>통계·리포트</strong> - 감사 로그 기반 분석과 맞춤 리포트·CSV 제공</li>
+                    </ul>
+                </div>
+
+                <!-- 핵심 구현 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-cogs"></i> 핵심 구현</h3>
+                    <ul class="modal-list">
+                        <li><strong>역할 기반 인증</strong> - ADMIN, MANAGER, USER 권한 구분</li>
+                        <li><strong>세션 기반 인증</strong> - 로그인 상태 관리 및 권한 체크</li>
+                        <li><strong>접근 제어 로직</strong> - 각 기능별 권한 검증 및 접근 제한</li>
+                        <li><strong>참조 무결성 검증</strong> - 부서/직급 삭제 시 사용 중인 데이터 확인</li>
+                        <li><strong>필수 필드 검증</strong> - 데이터 입력 시 유효성 검사</li>
+                        <li><strong>트랜잭션 처리</strong> - 데이터 일관성 보장을 위한 트랜잭션 관리</li>
+                        <li><strong>공통 모듈 분리</strong> - 인증, 검증, 유틸리티 기능 모듈화</li>
+                        <li><strong>MVC 패턴 적용</strong> - 관심사 분리 및 코드 구조화</li>
+                    </ul>
+                </div>
+
+                <!-- 트러블슈팅 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-bug"></i> 트러블슈팅</h3>
+                    <div class="troubleshoot-item">
+                        <div class="trouble-problem">
+                            <span class="trouble-label">문제</span>
+                            팀원 간 UI/UX 디자인 방향성 차이
+                        </div>
+                        <div class="trouble-solution">
+                            <span class="trouble-label solution">해결</span>
+                            통일된 디자인 가이드라인 수립
+                        </div>
+                    </div>
+                    <div class="troubleshoot-item">
+                        <div class="trouble-problem">
+                            <span class="trouble-label">문제</span>
+                            권한 관리 시스템 구현
+                        </div>
+                        <div class="trouble-solution">
+                            <span class="trouble-label solution">해결</span>
+                            역할 기반 접근 제어(RBAC) 패턴 적용
+                        </div>
+                    </div>
+                    <div class="troubleshoot-item">
+                        <div class="trouble-problem">
+                            <span class="trouble-label">문제</span>
+                            각자 개발한 기능 통합 시 중복 코드 및 스타일 차이
+                        </div>
+                        <div class="trouble-solution">
+                            <span class="trouble-label solution">해결</span>
+                            매일 코드 리뷰 세션 도입, 공통 모듈 분리
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 결과 및 회고 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-lightbulb"></i> 결과 및 회고</h3>
+                    <p class="modal-reflection">팀원들과의 협업을 통해 초기 기획과 설계의 중요성을 느낄 수 있었고, 팀원 간 효과적인 소통과 협업 방식을 습득할 수 있었습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GEMINI AI 채팅 웹 애플리케이션 모달 -->
+    <div id="modal-gemini" class="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <span class="modal-label">PROJECT DETAILS</span>
+                <h2>GEMINI AI 채팅 웹 애플리케이션</h2>
+            </div>
+            <div class="modal-body">
+                <!-- 주요 기술 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-code"></i> 주요 기술</h3>
+                    <div class="modal-tech-badges">
+                        <span class="modal-badge">HTML</span>
+                        <span class="modal-badge">CSS</span>
+                        <span class="modal-badge">Vanilla JavaScript</span>
+                        <span class="modal-badge">Gemini API</span>
+                    </div>
+                </div>
+
+                <!-- 주요 기능 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-list-check"></i> 주요 기능</h3>
+                    <ul class="modal-list">
+                        <li><strong>실시간 AI 채팅</strong> - Gemini 2.0 Flash 모델과의 실시간 대화</li>
+                        <li><strong>말풍선 UI</strong> - 사용자와 AI 메시지를 구분하는 직관적인 채팅 인터페이스</li>
+                        <li><strong>타이핑 인디케이터</strong> - AI 응답 대기 중 "답변 중..." 로딩 표시</li>
+                        <li><strong>시간 표시</strong> - 각 메시지에 전송 시간 (오전/오후 형식) 표시</li>
+                        <li><strong>키보드 단축키</strong> - Enter 키로 메시지 전송 가능</li>
+                        <li><strong>자동 스크롤</strong> - 새 메시지 추가 시 자동으로 하단으로 스크롤</li>
+                    </ul>
+                </div>
+
+                <!-- 핵심 구현 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-cogs"></i> 핵심 구현</h3>
+                    <ul class="modal-list">
+                        <li><strong>비동기 API 통신</strong> - async/await를 활용한 Gemini API 호출</li>
+                        <li><strong>동적 DOM 조작</strong> - JavaScript로 실시간 메시지 추가 및 UI 업데이트</li>
+                        <li><strong>에러 핸들링</strong> - API 호출 실패 시 사용자에게 명확한 오류 메시지 표시</li>
+                        <li><strong>텍스트 포맷팅</strong> - 줄바꿈 문자(\n)를 HTML &lt;br&gt; 태그로 변환하여 가독성 향상</li>
+                        <li><strong>반응형 레이아웃</strong> - Flexbox를 활용한 유연한 채팅 컨테이너 구성</li>
+                        <li><strong>상태 관리</strong> - 전송 버튼 비활성화로 중복 요청 방지</li>
+                    </ul>
+                </div>
+
+                <!-- 트러블슈팅 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-bug"></i> 트러블슈팅</h3>
+                    <div class="troubleshoot-item">
+                        <div class="trouble-problem">
+                            <span class="trouble-label">문제</span>
+                            JavaScript Date 객체의 24시간제 형식이 한국 사용자에게 친숙하지 않음
+                        </div>
+                        <div class="trouble-solution">
+                            <span class="trouble-label solution">해결</span>
+                            12시간제 변환 로직 구현으로 해결
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 결과 및 회고 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-lightbulb"></i> 결과 및 회고</h3>
+                    <p class="modal-reflection">API 통신의 중요성을 경험하며 비동기 처리와 에러 핸들링이 사용자 경험에 미치는 영향이 크다는 것을 체감했습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 수면 개선 스마트 기기 모달 -->
+    <div id="modal-capstone" class="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <span class="modal-label">PROJECT DETAILS</span>
+                <h2>수면 개선 스마트 기기</h2>
+            </div>
+            <div class="modal-body">
+                <!-- 주요 기술 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-code"></i> 주요 기술</h3>
+                    <div class="modal-tech-badges">
+                        <span class="modal-badge">Arduino</span>
+                        <span class="modal-badge">RaspberryPi</span>
+                        <span class="modal-badge">Blynk</span>
+                        <span class="modal-badge">Linux</span>
+                        <span class="modal-badge">C++</span>
+                    </div>
+                </div>
+
+                <!-- 주요 기능 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-list-check"></i> 주요 기능</h3>
+                    <ul class="modal-list">
+                        <li><strong>실시간 환경 모니터링</strong> - 날짜/시계/온습도 표시</li>
+                        <li><strong>수면 측정 모드</strong> - MODE 버튼을 통한 수면 측정 기능</li>
+                        <li><strong>백라이트 제어</strong> - ON/OFF 기능으로 야간 사용 편의성</li>
+                        <li><strong>수면질 점수 측정</strong> - 센서 데이터 기반 수면 품질 분석</li>
+                        <li><strong>시리얼 모니터 페이지 전환</strong> - 다양한 정보 확인을 위한 페이지 전환</li>
+                    </ul>
+                </div>
+
+                <!-- 핵심 구현 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-cogs"></i> 핵심 구현</h3>
+                    <ul class="modal-list">
+                        <li><strong>ESP8266 + Blynk UI</strong> - Wi-Fi 모듈과 Blynk 앱을 연동한 실시간 모니터링 인터페이스</li>
+                        <li><strong>NSF 기준 수면 점수</strong> - National Sleep Foundation 기준을 적용한 수면 품질 점수 산출 알고리즘</li>
+                        <li><strong>Linux Raspberry Pi 서버</strong> - 데이터 수집 및 처리를 위한 리눅스 기반 서버 구축</li>
+                    </ul>
+                </div>
+
+                <!-- 트러블슈팅 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-bug"></i> 트러블슈팅</h3>
+                    <div class="troubleshoot-item">
+                        <div class="trouble-problem">
+                            <span class="trouble-label">문제</span>
+                            센서 데이터의 비현실성 문제
+                        </div>
+                        <div class="trouble-solution">
+                            <span class="trouble-label solution">해결</span>
+                            센서 데이터 조작 및 보정을 통해 현실성 있는 데이터 구축
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 결과 및 회고 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-lightbulb"></i> 결과 및 회고</h3>
+                    <p class="modal-reflection">캡스톤 대회 우수상을 수상하였으며, 이 프로젝트를 통해 IoT와 임베디드 시스템에 친숙해지는 좋은 계기가 되었습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 이커머스 고객 이탈 예측 모달 -->
+    <div id="modal-ml" class="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <span class="modal-label">PROJECT DETAILS</span>
+                <h2>이커머스 고객 이탈 예측</h2>
+            </div>
+            <div class="modal-body">
+                <!-- 데이터셋 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-database"></i> Kaggle Dataset</h3>
+                    <a href="https://www.kaggle.com/datasets/dhairyajeetsingh/ecommerce-customer-behavior-dataset" target="_blank" class="modal-dataset-link">
+                        <i class="fab fa-kaggle"></i> E-commerce Customer Behavior Dataset
+                    </a>
+                </div>
+
+                <!-- 주요 기술 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-code"></i> 주요 기술</h3>
+                    <div class="modal-tech-badges">
+                        <span class="modal-badge">Python</span>
+                        <span class="modal-badge">Scikit-learn</span>
+                    </div>
+                </div>
+
+                <!-- 주요 기능 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-list-check"></i> 주요 기능</h3>
+                    <ul class="modal-list">
+                        <li><strong>이탈 확률 실시간 예측</strong> - 15개 핵심 특성 기반 4단계 위험도 분류 (낮음/보통/높음/매우 높음)</li>
+                        <li><strong>4개 모델 성능 비교</strong> - Logistic Regression, Decision Tree, Random Forest, XGBoost 평가</li>
+                        <li><strong>Feature Importance 시각화</strong> - 고객 서비스 통화 수, 평생 가치, 장바구니 이탈률 등 주요 지표 분석</li>
+                        <li><strong>맞춤형 추천 전략</strong> - 위험도별 차별화된 마케팅 전략 자동 생성</li>
+                        <li><strong>Streamlit 웹 대시보드</strong> - Glassmorphism 디자인, 인터랙티브 차트, 5개 탭 구조</li>
+                    </ul>
+                </div>
+
+                <!-- 핵심 구현 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-cogs"></i> 핵심 구현</h3>
+                    <ul class="modal-list">
+                        <li><strong>특성 선택</strong> - Random Forest 기반 특성 중요도 분석으로 24개→15개 특성 선택 (누적 중요도 86% 유지)</li>
+                        <li><strong>클래스 불균형 해결</strong> - SMOTE로 클래스 불균형 해결 (29:71 → 50:50), Recall 32.7%p 향상</li>
+                        <li><strong>하이퍼파라미터 최적화</strong> - GridSearchCV + 5-Fold CV로 XGBoost 하이퍼파라미터 최적화</li>
+                        <li><strong>모델 선정</strong> - 5개 모델 비교 후 XGBoost 선정 (ROC-AUC 98.23%)</li>
+                        <li><strong>웹앱 구현</strong> - Streamlit 웹앱 구현 - 모델 캐싱, 세션 상태 관리, Plotly 인터랙티브 차트</li>
+                    </ul>
+                </div>
+
+                <!-- 결과 및 회고 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-lightbulb"></i> 결과 및 회고</h3>
+                    <p class="modal-reflection">머신러닝 파이프라인 전체 과정(전처리→학습→평가→배포)을 경험했으며, 단순 모델 정확도보다 실무 적용성이 중요함을 깨달았습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI 기반 주조 결함 검사 시스템 모달 -->
+    <div id="modal-llm" class="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <span class="modal-label">PROJECT DETAILS</span>
+                <h2>AI 기반 주조 결함 검사 시스템</h2>
+            </div>
+            <div class="modal-body">
+                <!-- 데이터셋 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-database"></i> Kaggle Dataset</h3>
+                    <a href="https://www.kaggle.com/datasets/ravirajsinh45/real-life-industrial-dataset-of-casting-product?select=casting_data" target="_blank" class="modal-dataset-link">
+                        <i class="fab fa-kaggle"></i> Real-life Industrial Dataset of Casting Product
+                    </a>
+                </div>
+
+                <!-- 주요 기술 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-code"></i> 주요 기술</h3>
+                    <div class="modal-tech-badges">
+                        <span class="modal-badge">Python</span>
+                        <span class="modal-badge">PyTorch</span>
+                    </div>
+                </div>
+
+                <!-- 주요 기능 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-list-check"></i> 주요 기능</h3>
+                    <ul class="modal-list">
+                        <li><strong>고성능 결함 탐지</strong> - EfficientNet-B0 기반 99.86% 정확도 (손실률 0.006, 모델 크기 16.3MB)</li>
+                        <li><strong>AI 분석 리포트</strong> - Claude Sonnet 4.5가 전문가 수준의 결함 분석 및 조치 제안</li>
+                        <li><strong>Grad-CAM 시각화</strong> - AI 판단 근거를 히트맵으로 명확히 제시</li>
+                        <li><strong>PDF 보고서 자동 생성</strong> - 한글 지원, 전문 검사 양식 (ReportLab 기반)</li>
+                        <li><strong>실시간 통계 대시보드</strong> - 일일/주간/월간 검사 통계 및 추이 분석 (Plotly 인터랙티브 차트)</li>
+                    </ul>
+                </div>
+
+                <!-- 핵심 구현 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-cogs"></i> 핵심 구현</h3>
+                    <ul class="modal-list">
+                        <li><strong>EfficientNet-B0 전이학습</strong> - ImageNet 사전학습 가중치 활용, 손실률 0.006 달성으로 안정적 일반화 성능 확보</li>
+                        <li><strong>LLM 통합 아키텍처</strong> - Anthropic API 클라이언트 구현 및 구조화된 프롬프트 빌더로 일관된 분석 품질 보장</li>
+                        <li><strong>검사 오케스트레이터 패턴</strong> - CNN 추론 → Grad-CAM → LLM 분석 → PDF 생성 파이프라인 구현</li>
+                        <li><strong>검사 이력 관리</strong> - JSON 기반 영구 저장소 및 기간별 필터링 (오늘/7일/30일) 통계 집계</li>
+                        <li><strong>모듈형 아키텍처</strong> - classifiers, explainers, llm, services, utils로 관심사 분리 설계</li>
+                    </ul>
+                </div>
+
+                <!-- 트러블슈팅 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-bug"></i> 트러블슈팅</h3>
+                    <div class="troubleshoot-item">
+                        <div class="trouble-problem">
+                            <span class="trouble-label">문제</span>
+                            CPU 학습 한계
+                        </div>
+                        <div class="trouble-solution">
+                            <span class="trouble-label solution">해결</span>
+                            Kaggle GPU(T4) 환경으로 전환하여 7,340장 데이터로 99.86% 정확도 달성
+                        </div>
+                    </div>
+                    <div class="troubleshoot-item">
+                        <div class="trouble-problem">
+                            <span class="trouble-label">문제</span>
+                            PDF 한글 깨짐
+                        </div>
+                        <div class="trouble-solution">
+                            <span class="trouble-label solution">해결</span>
+                            폰트 서브셋 비활성화(subfontIndex=0, subset=None) 및 압축 해제(compress=0)로 해결
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 결과 및 회고 -->
+                <div class="modal-section">
+                    <h3><i class="fas fa-lightbulb"></i> 결과 및 회고</h3>
+                    <p class="modal-reflection">EfficientNet-B0 전이학습으로 99.86% 정확도를 달성하고 Claude Sonnet 4.5 LLM을 통합하여 전문가 수준의 분석 리포트를 자동 생성함으로써, 단순 딥러닝 분류를 넘어 Grad-CAM과 LLM을 결합한 설명 가능하고 실무 적용 가능한 AI 시스템을 구축한 경험을 얻었습니다.</p>
                 </div>
             </div>
         </div>
