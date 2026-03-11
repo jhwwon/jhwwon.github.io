@@ -904,22 +904,109 @@
     </div>
 
     <!-- SoundSpace 모달 -->
-    <div id="modal-soundspace" class="project-modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <div class="modal-header">
-                <span class="modal-label">PROJECT DETAILS</span>
-                <h2>SoundSpace AI기반 3단계 음악 검증 시스템</h2>
+<div id="modal-soundspace" class="project-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-header">
+            <span class="modal-label">PROJECT DETAILS</span>
+            <h2>SoundSpace — AI 기반 3단계 음악 분석 & 글로벌 플레이리스트 큐레이션<br>
+                담당 기능: Spring Boot 백엔드 / FastAPI AI 모델(M1) 개발</h2>
+        </div>
+        <div class="modal-body">
+
+            <!-- 데이터셋 -->
+            <div class="modal-section">
+                <h3><i class="fas fa-database"></i> Kaggle Dataset</h3>
+                <a href="https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset"
+                    target="_blank" class="modal-dataset-link">
+                    <i class="fab fa-kaggle"></i> Spotify Tracks Dataset (125개 장르 · 114,000곡)
+                </a>
             </div>
-            <div class="modal-body">
-                <div class="modal-section" style="text-align: center; padding: 40px 0;">
-                    <i class="fas fa-tools" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px; display: block;"></i>
-                    <h3 style="font-size: 1.5rem;">작업 중입니다</h3>
+
+            <!-- 주요 기술 -->
+            <div class="modal-section">
+                <h3><i class="fas fa-code"></i> 주요 기술</h3>
+                <div class="modal-tech-badges">
+                    <span class="modal-badge">React</span>
+                    <span class="modal-badge">TypeScript</span>
+                    <span class="modal-badge">Node.js</span>
+                    <span class="modal-badge">Spring Boot</span>
+                    <span class="modal-badge">FastAPI</span>
+                    <span class="modal-badge">Python</span>
+                    <span class="modal-badge">MariaDB</span>
+                    <span class="modal-badge">JWT</span>
+                    <span class="modal-badge">Docker</span>
+                    <span class="modal-badge">Spotify API</span>
+                    <span class="modal-badge">Tidal API</span>
+                    <span class="modal-badge">YouTube Music API</span>
                 </div>
             </div>
+
+            <!-- 주요 기능 -->
+            <div class="modal-section">
+                <h3><i class="fas fa-list-check"></i> 주요 기능</h3>
+                <ul class="modal-list">
+                    <li><strong>글로벌 스트리밍 연동</strong> — Spotify / Tidal / YouTube Music OAuth 2.0으로 외부 플레이리스트 가져오기</li>
+                    <li><strong>개인 음악 공간 (PMS)</strong> — 내 플레이리스트 & 트랙 CRUD 및 개인 공간 관리</li>
+                    <li><strong>외부 연동 공간 (EMS)</strong> — 복수의 스트리밍 서비스를 한 화면에서 통합 관리</li>
+                    <li><strong>AI 추천 공간 (GMS)</strong> — 3단계 ML 모델 기반 개인화 음악 추천 & 큐레이션</li>
+                    <li><strong>관리자 시스템</strong> — 사용자 관리, 전역 테마 설정, 시스템 설정 (/api/admin)</li>
+                    <li><strong>JWT 인증</strong> — Spring Boot 단일 인증 진입점, 다중 사용자 데이터 격리 처리</li>
+                </ul>
+            </div>
+
+            <!-- 핵심 구현 -->
+            <div class="modal-section">
+                <h3><i class="fas fa-cogs"></i> 핵심 구현</h3>
+                <ul class="modal-list">
+                    <li><strong>3-tier MSA 아키텍처</strong> — React FE / Node.js+Spring Boot BE / FastAPI AI 서버를 Docker 컨테이너로 통합 운영</li>
+                    <li><strong>오디오 특성 예측 파이프라인 (M1)</strong> — Kaggle Spotify 데이터(114,000곡)로 모델 학습, 오디오 특성 없는 개인 플레이리스트에 9개 특성 자동 예측</li>
+                    <li><strong>피처 엔지니어링</strong> — 오디오 특성 간 상관관계 분석(energy-loudness r=0.76 등)으로 12개 → 9개 최적 피처 선정, 70:30 장르 균등 분할</li>
+                    <li><strong>공유 DB 설계</strong> — Node.js와 Spring Boot가 동일한 MariaDB(music_space_db)를 도메인별 Repository로 분리하여 충돌 없이 공유</li>
+                    <li><strong>OAuth 2.0 멀티 플랫폼 연동</strong> — Spotify · Tidal · YouTube Music 각각의 인증 흐름 및 토큰 갱신 구현</li>
+                </ul>
+            </div>
+
+            <!-- 트러블슈팅 -->
+            <div class="modal-section">
+                <h3><i class="fas fa-bug"></i> 트러블슈팅</h3>
+                <div class="troubleshoot-item">
+                    <div class="trouble-problem">
+                        <span class="trouble-label">문제</span>
+                        개인 플레이리스트에 오디오 특성(danceability, energy 등) 데이터가 없어 AI 추천 모델 학습 불가
+                    </div>
+                    <div class="trouble-solution">
+                        <span class="trouble-label solution">해결</span>
+                        Kaggle Spotify Tracks Dataset(114,000곡 + 오디오 특성)으로 M1 예측 모델 학습 → 개인 플레이리스트 트랙에 오디오 특성 자동 예측 후 채워넣기
+                    </div>
+                </div>
+                <div class="troubleshoot-item">
+                    <div class="trouble-problem">
+                        <span class="trouble-label">문제</span>
+                        LightGBM 모델 학습 후 새로운 500개 곡 평가 시 R² 전 특성 음수(평균 -0.234) — 과적합으로 일반화 실패
+                    </div>
+                    <div class="trouble-solution">
+                        <span class="trouble-label solution">해결</span>
+                        6개 회귀 모델 비교 실험 진행 후 최적 모델 선정, 학습/평가 데이터 분포 불일치 원인 분석 및 개선
+                    </div>
+                </div>
+            </div>
+
+            <!-- 결과 및 회고 -->
+            <div class="modal-section">
+                <h3><i class="fas fa-lightbulb"></i> 결과 및 회고</h3>
+                <p class="modal-reflection">
+                    React + Node.js + Spring Boot + FastAPI 4개 레이어를 Docker로 통합 배포하며 실제 MSA 운영을 경험했습니다.
+                    오디오 특성이 없는 개인 플레이리스트 문제를 Kaggle 데이터 기반 ML 모델로 해결하는 과정에서
+                    실서비스 데이터 파이프라인 설계의 중요성을 체감했고, 2개의 백엔드가 하나의 DB를 충돌 없이 공유하는
+                    아키텍처 설계 원칙의 가치를 직접 느낄 수 있었습니다.
+                </p>
+            </div>
+
         </div>
     </div>
+</div>
 
     <!-- 이커머스 고객 이탈 예측 모달 -->
     <div id="modal-ml" class="project-modal">
