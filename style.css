@@ -1521,3 +1521,45 @@ nav.scrolled {
 [data-theme='dark'] .modal-reflection {
     background: var(--bg-main);
 }
+
+/* More 버튼 말풍선 힌트 */
+.more-btn-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.more-hint-bubble {
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 10;
+    animation: hint-bounce-fade 300s ease forwards;
+}
+
+.more-hint-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--primary);
+}
+
+@keyframes hint-bounce-fade {
+    0%   { opacity: 0; transform: translateX(-50%) translateY(0); }
+    2%   { opacity: 1; transform: translateX(-50%) translateY(-6px); }
+    4%   { transform: translateX(-50%) translateY(0); }
+    6%   { transform: translateX(-50%) translateY(-6px); }
+    8%   { transform: translateX(-50%) translateY(0); }
+    95%  { opacity: 1; }
+    100% { opacity: 0; transform: translateX(-50%) translateY(0); }
+}
