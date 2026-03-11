@@ -1530,7 +1530,7 @@ nav.scrolled {
 
 .more-hint-bubble {
     position: absolute;
-    bottom: 115%;
+    top: 115%;
     left: 50%;
     transform: translateX(-50%);
     background: var(--primary);
@@ -1547,18 +1547,18 @@ nav.scrolled {
 .more-hint-bubble::after {
     content: '';
     position: absolute;
-    top: 100%;
+    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
     border: 6px solid transparent;
-    border-top-color: var(--primary);
+    border-bottom-color: var(--primary);
 }
 
 @keyframes hint-bounce-fade {
     0%   { opacity: 0; transform: translateX(-50%) translateY(0); }
-    2%   { opacity: 1; transform: translateX(-50%) translateY(-6px); }
+    2%   { opacity: 1; transform: translateX(-50%) translateY(6px); }
     4%   { transform: translateX(-50%) translateY(0); }
-    6%   { transform: translateX(-50%) translateY(-6px); }
+    6%   { transform: translateX(-50%) translateY(6px); }
     8%   { transform: translateX(-50%) translateY(0); }
     95%  { opacity: 1; }
     100% { opacity: 0; transform: translateX(-50%) translateY(0); }
